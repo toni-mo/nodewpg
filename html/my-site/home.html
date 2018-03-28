@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body id="home" onload="sendMessage()">
+	<section id="notebook" class="flex-container">
+			<div class="column-3 section-img"></div>
+			<div class="column-2 section-desc">
+				<h3>Use your Notebook</h3>
+				<ul>
+					<li>Create a plan, list of tasks for todays work</li>
+					<li>Draw a sketch</li>
+					<li>Note your progress</li>
+					<li>Note problems you encounter</li>
+					<li>Note how you solved them</li>
+					<li>Spill out your thoughts on the paper</li>
+					<li>You can use your notebook everywhere</li>
+				</ul>
+			</div>
+			<!-- <div class="border">
+				asdad
+			</div>
+			<div class="border">
+				asdad
+			</div> -->
+		</section>
+		<section id="rethink" class="flex-container">
+			<div class="column-2 section-desc">
+				<h3>Think Abstractly</h3>
+				<ul>
+					<li>Transition complex ideas to simplier ones</li>
+					<li>Simplify things</li>
+					<li>Use universal programming language. It exceeds boundaries of all programming language</li>
+					<li>Just like this guy to the right</li>
+					<li>Transition to your field of interest. It can be sport, hobby, etc.</li>
+				</ul>
+			</div>
+			<div class="column-3 section-img">
+				
+			</div>
+			<!-- <div class="border">
+				asdad
+			</div>
+			<div class="border">
+				asdad
+			</div> -->
+		</section>
+		<section id="differentangles" class="flex-container">
+			<div class="column-3 section-img"></div>
+			<div class="column-2 section-desc">
+				<h3>Look at the problem from different angles</h3>
+				<ul>
+					<li>Try to solve problem as it is</li>
+					<li>Look from a slightly different angle</li>
+					<li>Look from another angle</li>
+					<li>Look in a totaly different place that has no connection to this problem. Sometimes you can find solution in unexpected places</li>
+				</ul>
+			</div>
+		</section>
+		<section id="getsomerest" class="flex-container">
+			<div class="column-2 section-desc border">
+				<h3>Give your brain a rest</h3>
+				<ul>
+					<li>Leave your task for a while</li>
+					<li>Distract yourself from your work</li>
+					<li>Do some workout</li>
+					<li>Take a good walk on fresh air</li>
+					<li>Working on computer your brain gets poluted. It needs time to refresh itself</li>
+					<li>Fresh mind takes on tasks much more efficient</li>
+				</ul>
+			</div>
+			<div class="column-3 section-img border"></div>
+		</section>
+		<section id="workincrementaly" class="flex-container">
+			<div class="column-3 section-img"></div>
+			<div class="column-2 section-desc">
+				<h3>Work Incrementaly</h3>
+				<ul>
+					<li>Select one small feature you will be working on</li>
+					<li>Create a list of tasks for this feature</li>
+					<li>Check what is finnished and what is yet to be done</li>
+					<li>Try to make deadlines for each feature</li>
+					<li>Add up one feature(part of code) each time</li>
+				</ul>
+			</div>
+		</section>
+		<section id="givecredit" class="flex-container">
+			<div class="column-2 section-desc border">
+				<h3>Give yourself a credit</h3>
+				<ul>
+					<li>Just like this guy to the right</li>
+					<li>Be aware of your each small success. Even if it's not a solved problem it's a useful experience</li>
+					<li>Celebrate each finished piece of work</li>
+					<li>This moment from Mask movie is really brilliantly done.</li>
+					<li>Have to give credit to the movie director</li>
+				</ul>
+			</div>
+			<div class="column-3 section-img border">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/qfO_OfmGOl0?start=33&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+			</div>
+		</section>
+		<section id="notsogreat" class="flex-container">
+			<div class="column-3 section-img"></div>
+			<div class="column-2 section-desc">
+				<h3>All great things were not so great in the begining</h3>
+				<ul>
+					<li>Don't discourage yourself that your webpage is not as fancy as those on the internet</li>
+					<li>Every great looking thing was awfull at the begining</li>
+					<li>Some still sucks after years of work...like facebook. It's UI sucks</li>
+					<li>Look at the first Batman movie(to the left). Robin wasn't able to see under his mask</li>
+					<li>Imagine your first website is like this first Batman. It sucks in the begining but how cool it will look when you're done.</li>
+					<li>Create the screenshots of the time you start working on the website and when you finished it. You will see the real improvements of your work</li>
+				</ul>
+			</div>
+		</section>
+		<script type="text/javascript">
+				// var iframe = document.getElementById("pageFrame");
+			// Erste Test-Nachricht an den Iframe
+			// iframe.onload = 
+			function sendMessage() {
+
+			var body = document.body;
+			var html = document.documentElement;
+
+			bodyScrollheight = body.scrollHeight;
+			bodyOffsetHeight = body.offsetHeight;
+			htmlScrollHeight = html.scrollHeight;
+			htmlOffsetHeight = html.offsetHeight;
+			htmlClientHeight = html.clientHeight;
+
+			var height = document.documentElement.offsetHeight;
+			alert(bodyScrollheight+" "+bodyOffsetHeight+" "+htmlScrollHeight+" "+htmlOffsetHeight+" "+htmlClientHeight);
+			parent.postMessage(htmlClientHeight, "*" );
+			};
+		</script>
+</body>
+</html>

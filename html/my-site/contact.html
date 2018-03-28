@@ -2,15 +2,46 @@
 <html>
 <head>
 	<title>5 Tips for Web Development</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
-<body>
-	<main>
-		<section>
-			<h2>Contact Author</h2>
-			<form></form>
-			<iframe src="//coub.com/embed/uyx7k?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen frameborder="0" width="640" height="266" allow="autoplay"></iframe>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/qfO_OfmGOl0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</section>
-	</main>
+<body id="contact" class="contact-background">
+	<div class="column-3 border center-block">
+		<h3>Contact Form</h3>
+		<form class="contact-form">
+			<label for="name">Name</label>
+			<input id="name" type="text" name="name" placeholder="Given Name">
+			<label for="surname">Surname</label>
+			<input id="surname" type="text" name="surname" placeholder="Surname">
+			<label for="email">Email</label>
+			<input type="email" name="email" placeholder="youremail@mail.com">
+			<fieldset>
+				<legend>Drink</legend>
+				<label class="check-radio">
+					<input type="checkbox" name="drink1" value="coffee">
+					coffee
+				</label>
+				<label class="check-radio">
+					<input type="checkbox" name="drink2" value="tea">
+					tea
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Pet</legend>
+				<label class="check-radio">
+					<input type="radio" name="pet" value="cat">
+					Cat
+				</label>
+				<label class="check-radio">
+					<input type="radio" name="pet" value="dog" checked>
+					Dog	
+				</label>
+			</fieldset>
+			
+			<br>
+			
+			<input type="submit" name="" value="See what happnes">
+
+		</form>
+	</div>
 </body>
 </html>

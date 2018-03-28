@@ -9,121 +9,14 @@
 	<header class="">
 		<h1>Tips for <br> Web Development</h1>
 		<nav>
-			<a href="">Home</a>
-			<a href="">About</a>
-			<a href="">Contact</a>
+			<ul>
+				<li target="home" onclick="changePage(this)">Home</li>
+				<li target="about" onclick="changePage(this)">About</li>
+				<li target="contact" onclick="changePage(this)">Contact</li>
+			</ul>
 		</nav>
 	</header>
-	<main class="">
-		<section id="notebook" class="flex-container">
-			<div class="column-3 section-img"></div>
-			<div class="column-2 section-desc">
-				<h3>Use your Notebook</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-			<!-- <div class="border">
-				asdad
-			</div>
-			<div class="border">
-				asdad
-			</div> -->
-		</section>
-		<section id="rethink" class="flex-container">
-			<div class="column-2 section-desc">
-				<h3>Think Abstractly</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-			<div class="column-3 section-img">
-				
-			</div>
-			<!-- <div class="border">
-				asdad
-			</div>
-			<div class="border">
-				asdad
-			</div> -->
-		</section>
-		<section id="differentangles" class="flex-container">
-			<div class="column-3 section-img"></div>
-			<div class="column-2 section-desc">
-				<h3>Look at the problem from different angles</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-		</section>
-		<section id="getsomerest" class="flex-container">
-			<div class="column-2 section-desc border">
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-			<div class="column-3 section-img border"></div>
-		</section>
-		<section id="workincrementaly" class="flex-container">
-			<div class="column-3 section-img"></div>
-			<div class="column-2 section-desc">
-				<h3>Work Incrementaly</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-		</section>
-		<section id="givecredit" class="flex-container">
-			<div class="column-2 section-desc border">
-				<h3>Give yourself a credit</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-			<div class="column-3 section-img border">
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/qfO_OfmGOl0?start=33&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-			</div>
-		</section>
-		<section id="notsogreat" class="flex-container">
-			<div class="column-3 section-img"></div>
-			<div class="column-2 section-desc">
-				<h3>All great things were not so great in the begining</h3>
-				<ul>
-					<li>Create a plan</li>
-					<li>Draw a sketch</li>
-					<li>Note your progress</li>
-					<li>Note problems you encounter</li>
-					<li>Spill out your thoughts on the paper</li>
-				</ul>
-			</div>
-		</section>
-
-	</main>
+			<iframe id="pageFrame" src="home.html" allowfullscreen="allowfullscreen" width="100%" height="600px"  scrolling="auto" seamless frameborder="0"></iframe>
 	<footer>
 		<div class="links">
 			<div class="column-1">
@@ -158,5 +51,44 @@
 			Copy & Pasted by Anton Shevchuk @ ComIT
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+		var changePage = function(object){
+			// alert(targetPage);
+			target = object.getAttribute("target");
+			alert(target);
+			document.getElementById("pageFrame").setAttribute("src", target + ".html");
+			if(target == 'about')
+				document.getElementById("pageFrame").setAttribute("height", "800px");
+		
+		}
+
+		var renderIframe = function(obj){
+			alert("Time to render!");
+			// obj.style.height = 0;
+			 // obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+
+			 // frameHeight = obj.contentWindow.document.body.scrollHeight;
+			 // alert(frameHeight);
+			 // htmlObject.style.height = htmlObject.contentWindow.document.body.scrollHeight + "px";
+		}	
+	</script>
+	<script type="text/javascript">
+			
+
+
+			function listener(e){
+				// alert(e.data);
+
+				// document.getElementById("pageFrame").style.height = e.data + "px";
+				}
+
+				// Listener für alle Browser
+				if (window.addEventListener){
+				window.addEventListener("message", listener, false);
+				} else {
+				window.attachEvent("onmessage", listener);
+				}
+		</script>
 </body>
 </html>
