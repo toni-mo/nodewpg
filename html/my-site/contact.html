@@ -5,16 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
 <body id="contact" class="contact-background">
-	<div class="column-3 border center-block">
-		<h3>Contact Form</h3>
+	<div class="column-2  center-block">
+		<h3>Fill in following form please</h3>
 		<form class="contact-form">
 			<label for="name">Name</label>
-			<input id="name" type="text" name="name" placeholder="Given Name">
+			<input id="name" type="text" name="name" placeholder="Given Name" pattern="^[a-zA-Z]+$" title="Use only letters">
 			<label for="surname">Surname</label>
 			<input id="surname" type="text" name="surname" placeholder="Surname">
+			<label for="age">Age</label>
+			<input id="age" type="text" name="age" placeholder="Age" pattern="\d+" title="Use only digits">
 			<label for="email">Email</label>
 			<input type="email" name="email" placeholder="youremail@mail.com">
-			<fieldset>
+			<fieldset class="">
 				<legend>Drink</legend>
 				<label class="check-radio">
 					<input type="checkbox" name="drink1" value="coffee">
@@ -39,7 +41,7 @@
 			
 			<br>
 			
-			<input type="submit" name="" value="See what happnes">
+			<input class="" type="submit" name="" value="See what happens">
 
 		</form>
 	</div>

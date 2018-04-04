@@ -270,9 +270,26 @@ section .column-1, section .column-2, section .column-3, section .column-4, sect
 /*Contact Page Styles*/
 .contact-background{
 	background-image: url(img/whimsical-rockets.png);
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
 	background-position: 0%20%;
 	background-size: cover;
+}
+
+#contact .column-2{
+	margin-top: 45px;
+	padding-left: 65px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	background-color: #2f4777;
+	box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+	/*box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.75);*/
+}
+#contact h3{
+	color: #fff;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"]{
+	margin-bottom: 10px;
 }
 .contact-form label, #contact form input[type='text'], .contact-form input[type='email']{
 	display: block;
@@ -284,6 +301,27 @@ section .column-1, section .column-2, section .column-3, section .column-4, sect
 	/*display: inline-block;*/
 	/*vertical-align: middle;*/
 }
+
+/*Styling Fieldset for checkboxes and radio*/
+.contact-form fieldset{
+	/*display: inline-block;*/
+	/*margin-left: 25px;*/
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+	width: 200px;
+	background: #2a2a3a;
+	border: none;
+	border-radius: 5px;
+}
+.contact-form fieldset legend{
+	padding-left: 13px;
+	padding-top: 5px;
+	padding-right: 13px;
+	color: #fff;
+	background: #2a2a3a;
+	border-radius: 5px;
+	/*border: 1px solid #fff;*/
+}
 .contact-form fieldset label{
 	display: inline-block;
 
@@ -293,12 +331,13 @@ section .column-1, section .column-2, section .column-3, section .column-4, sect
 }
 .contact-form input[type='text'], .contact-form input[type='email']{
 	height: 45px;
-	width: 500px;
+	width: 400px;
 	padding-left: 10px;
 	/*font-size: 1.2em;*/
 	/*color: #FFBA3A;*/
 	color: #fff;
-	background-color: #324554;
+	/*background-color: #324554;*/
+	background-color: #2a2a3a;
 	border: none;
 }
 .contact-form input[type='text']::placeholder, .contact-form input[type='email']::placeholder{
@@ -324,8 +363,51 @@ section .column-1, section .column-2, section .column-3, section .column-4, sect
 	padding-left: 10px;
 	padding-right: 10px;
 	/*background: linear-gradient(to bottom, #ff9933 0%, #222222 158%);*/
-	background-color: #324554;
+	background-color: #2a2a3a;
 }
 .contact-form input[type='submit']:focus{
 	outline: 2px solid #FFBA3A;
+}
+
+/* Tables Page styles*/
+#tables{
+	background-color: #2f4777;
+}
+#tables h1{
+	display: inline-block;
+	padding-bottom: 5px;
+	color: #fff;
+	border-bottom: 3px solid #FFBA3A;
+
+}
+table{
+	font-size: 15px;
+}
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+thead{
+	background-color: #2a2a3a;
+}
+tr td:first-child{
+	text-align: center;
+	min-width: 60px;
+}
+th, td{
+	padding: 10px;
+}
+td{
+	min-width: 120px;
+	text-align: justify;
+}
+th{
+	text-align: center;
+}
+table{
+	color: #fff;
+}
+table a{
+	color: #fff;
 }
