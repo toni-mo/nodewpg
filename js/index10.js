@@ -1,7 +1,10 @@
+// -- Program 10 --
 
+// Definition section
+let greeting;
 
-let name = "Nico";
-//let greeting = `Hello dear friend ${name}`;
-let greeting = "Hello dear friend " + name;
+// Body section
+greeting = "JavaScript Rocks!!!";
 
+// Output section
 console.log(greeting);
